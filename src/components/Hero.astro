@@ -1,0 +1,51 @@
+---
+const personalImageAlt = "Tomás Ruiz"
+import Badge from "@/components/Badge.astro"
+import LinkedInIcon from "@/components/icons/LinkedIn.astro"
+import MailIcon from "@/components/icons/Mail.astro"
+import SocialPill from "@/components/SocialPill.astro"
+---
+
+<div class="max-w-xl">
+  <div class="flex gap-4 mb-4">
+    <img
+      class="rounded-full shadow-lg size-16"
+      src="/me.png"
+      alt={personalImageAlt}
+    />
+    <a
+      href="https://linkedin.com/in/tomas-ruiz-191752227"
+      target="_blank"
+      rel="noopener"
+      class="flex items-center transition md:justify-center md:hover:scale-105"
+    >
+      <Badge>Available for collaboration</Badge>
+    </a>
+  </div>
+  <h1
+    class="text-4xl font-bold tracking-tight text-gray-800 sm:text-5xl dark:text-white"
+  >
+    Hey, I'm Tomás
+  </h1>
+  <p
+    class="mt-6 text-xl text-gray-800 dark:[&>strong]:text-blue-200 [&>strong]:text-blue-500 [&>strong]:font-semibold dark:text-gray-300"
+  >
+    Full Stack Developer with experience in system development and AI improvement. <strong>AI Trainer and Developer</strong> from Buenos Aires, Argentina. Passionate about creating innovative technological solutions.
+  </p>
+  <nav class="flex flex-wrap gap-4 mt-8">
+    <SocialPill href="mailto:tomasruiz.dev@gmail.com">
+      <MailIcon class="size-4" />
+      Contact Me
+    </SocialPill>
+    <SocialPill href="https://linkedin.com/in/tomas-ruiz-191752227">
+      <LinkedInIcon class="size-4" />
+      LinkedIn
+    </SocialPill>
+    <SocialPill href="./public/TOMAS-RUIZ-CV.pdf" target="_blank">
+      <svg class="size-4" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 11v8m0 0l-3-3m3 3l3-3m-3 3V4m0 0L9 7m3-3l3 3" />
+      </svg>
+      My CV
+    </SocialPill>
+  </nav>
+</div>
