@@ -1,37 +1,18 @@
 ---
 import ExperienceItem from "./ExperienceItem.astro"
-const EXPERIENCE = [
-  {
-    date: "Currently...",
-    title: "AI Trainer",
-    company: "Scale AI",
-    description:
-      "I improve artificial intelligence models by evaluating and optimizing their responses using Python, JavaScript, and SQL. I work on continuously enhancing the accuracy and relevance of the models.",
-    link: "https://scale.com",
-  },
-  {
-    date: "April 2023 - March 2024",
-    title: "Full Stack Developer",
-    company: "Ferraro Camacho",
-    description:
-      "Developed a comprehensive system for ANCAP using Symfony, Twig, and Bootstrap. Achieved a 30% optimization in processing time and worked on enhancing intuitive interfaces.",
-  },
-  {
-    date: "2019 - 2023",
-    title: "Frontend Web Developer",
-    company: "Freelance",
-    description:
-      "Designed engaging web interfaces and optimized user experience, increasing user satisfaction by 25%.",
-  },
-]
+import { CV } from "@/data/cv"
 ---
 
-<ol class="relative mt-16">
+<div class="relative mt-12">
   {
-    EXPERIENCE.map((experience) => (
-      <li class="mb-8">
+    CV.experiences.map((experience, index) => (
+      <div 
+        class="relative"
+        data-aos="fade-up"
+        data-aos-delay={index * 100}
+      >
         <ExperienceItem {...experience} />
-      </li>
+      </div>
     ))
   }
-</ol>
+</div>

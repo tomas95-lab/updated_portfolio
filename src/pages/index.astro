@@ -10,42 +10,48 @@ import Projects from "@/components/Projects.astro"
 import SectionContainer from "@/components/SectionContainer.astro"
 import Hero from "@/components/Hero.astro"
 import TitleSection from "@/components/TitleSection.astro"
+import TechStack from "@/components/TechStack.astro"
 ---
 
 <Layout
   title="Portfolio of Tomas Ruiz - Web Developer and AI trainer with 7 years of experience."
   description="Hire Tomás Ruiz to develop your web, mobile, or AI project. A passionate Full Stack Developer with hands-on experience in AI—improving models and streamlining processes at Scale AI—and a talent for turning ideas into innovative digital solutions. Elevate your project with cutting-edge technology and creative expertise!"
 >
-  <main class="px-4">
-    <SectionContainer class="py-16 md:py-36">
-      <Hero>
-      </slot>
-    </Hero>
+  <main id="main" class="px-4">
+    <SectionContainer class="py-20 md:py-32">
+      <Hero />
     </SectionContainer>
-    <div class="space-y-24">
-    <SectionContainer id="experiencia">
-      <TitleSection>
-        <Briefcase class="size-8" />
-        Work Experience
-      </TitleSection>
-      <Experience />
-    </SectionContainer>
+    <div class="space-y-28 lg:space-y-36">
+      <SectionContainer id="tech">
+        <TitleSection>
+          Tech stack
+        </TitleSection>
+        <TechStack />
+      </SectionContainer>
 
-    <SectionContainer id="proyectos">
-      <TitleSection>
-        <CodeIcon class="size-7" />
-        Projects
-      </TitleSection>
-      <Projects />
-    </SectionContainer>
+      <SectionContainer id="proyectos">
+        <TitleSection>
+          <CodeIcon slot="icon" class="size-5 md:size-6" />
+          Projects
+        </TitleSection>
+        <Projects />
+      </SectionContainer>
 
-    <SectionContainer id="sobre-mi">
-      <TitleSection>
-        <ProfileCheck class="size-8" />
-        About me
-      </TitleSection>
-      <AboutMe />
-    </SectionContainer>
-  </div>
+      <SectionContainer id="experiencia">
+        <TitleSection>
+          <Briefcase slot="icon" class="size-5 md:size-6" />
+          Work Experience
+        </TitleSection>
+        <Experience />
+      </SectionContainer>
+
+      <SectionContainer id="sobre-mi">
+        <TitleSection>
+          <ProfileCheck slot="icon" class="size-5 md:size-6" />
+          About me
+        </TitleSection>
+        <AboutMe />
+      </SectionContainer>
+    </div>
   </main>
 </Layout>

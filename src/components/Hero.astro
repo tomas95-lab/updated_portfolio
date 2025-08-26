@@ -6,40 +6,108 @@ import MailIcon from "@/components/icons/Mail.astro"
 import SocialPill from "@/components/SocialPill.astro"
 ---
 
-<div class="max-w-xl">
-  <div class="flex gap-4 mb-4">
-    <img
-      class="rounded-full shadow-lg size-16"
-      src="/me.png"
-      alt={personalImageAlt}
-    />
-    <a
-      href="https://linkedin.com/in/tomas-ruiz-191752227"
-      target="_blank"
-      rel="noopener"
-      class="flex items-center transition md:justify-center md:hover:scale-105"
-    >
-      <Badge>Available for collaboration</Badge>
-    </a>
+<section class="relative flex items-center justify-center min-h-[85vh] text-center">
+  <!-- Background decoration -->
+  <div class="absolute inset-0 -z-10 overflow-hidden">
+    <div class="absolute top-1/4 left-1/4 w-72 h-72 bg-gradient-to-r from-violet-600/15 to-indigo-600/15 rounded-full mix-blend-multiply filter blur-xl opacity-70 animate-pulse"></div>
+    <div class="absolute bottom-1/4 right-1/4 w-72 h-72 bg-gradient-to-r from-cyan-400/15 to-blue-600/15 rounded-full mix-blend-multiply filter blur-xl opacity-70 animate-pulse" style="animation-delay: 2s"></div>
   </div>
-  <h1
-    class="text-4xl font-bold tracking-tight text-gray-800 sm:text-5xl dark:text-white"
-  >
-    Hey, I'm Tomás
-  </h1>
-  <p
-    class="mt-6 text-xl text-gray-800 dark:[&>strong]:text-blue-200 [&>strong]:text-blue-500 [&>strong]:font-semibold dark:text-gray-300"
-  >
-    Full Stack Developer with experience in system development and AI improvement. <strong>AI Trainer and Developer</strong> from Buenos Aires, Argentina. Passionate about creating innovative technological solutions.
-  </p>
-  <nav class="flex flex-wrap gap-4 mt-8">
-    <SocialPill href="mailto:tomasruiz.dev@gmail.com">
-      <MailIcon class="size-4" />
-      Contact Me
-    </SocialPill>
-    <SocialPill href="https://www.linkedin.com/in/tom%C3%A1s-ruiz-191752227">
-      <LinkedInIcon class="size-4" />
-      LinkedIn
-    </SocialPill>
-  </nav>
-</div>
+
+  <div class="relative z-[1] max-w-4xl mx-auto px-4">
+    <!-- Small profile and badge -->
+    <div class="flex items-center justify-center gap-4 mb-8">
+      <div class="relative group">
+        <div class="absolute inset-0 bg-gradient-to-r from-blue-600 to-violet-600 rounded-full blur opacity-75 group-hover:opacity-100 transition-opacity duration-300"></div>
+        <img
+          class="relative rounded-full size-12 ring-2 ring-white/20 shadow-lg transition-transform duration-300 group-hover:scale-105"
+          src="/me.png"
+          width="48"
+          height="48"
+          alt={personalImageAlt}
+          loading="eager"
+          decoding="async"
+        />
+      </div>
+      <a
+        href="https://linkedin.com/in/tomas-ruiz-191752227"
+        target="_blank"
+        rel="noopener"
+        class="transition-transform duration-300 hover:scale-105 active:scale-95"
+      >
+        <Badge>🚀 Open to collaboration</Badge>
+      </a>
+    </div>
+
+    <!-- Main heading -->
+    <h1 class="text-5xl md:text-6xl lg:text-7xl font-black tracking-tight [text-wrap:balance] leading-[1.1] mb-8">
+      <span class="bg-gradient-to-r from-gray-900 via-gray-800 to-gray-900 dark:from-white dark:via-gray-100 dark:to-white bg-clip-text text-transparent">
+        Full Stack Developer
+      </span>
+      <br />
+      <span class="bg-gradient-to-r from-blue-600 via-violet-600 to-cyan-500 bg-clip-text text-transparent animate-gradient-x">
+        & AI Trainer
+      </span>
+    </h1>
+    
+    <!-- Subtitle -->
+    <p class="text-xl md:text-2xl text-gray-700 dark:text-gray-300 [text-wrap:pretty] leading-relaxed mb-12 max-w-3xl mx-auto">
+      I'm <strong class="font-semibold bg-gradient-to-r from-blue-600 to-violet-600 bg-clip-text text-transparent">Tomás Ruiz</strong>, 
+      building the future with modern web technologies and AI. Based in Buenos Aires, helping teams ship exceptional products.
+    </p>
+
+    <!-- CTA Buttons -->
+    <div class="flex flex-wrap items-center justify-center gap-4 mb-16">
+      <a 
+        href="mailto:tomasruiz.dev@gmail.com" 
+        class="group relative inline-flex items-center justify-center gap-3 px-8 py-4 text-base font-semibold text-white transition-all duration-300 bg-gradient-to-r from-blue-600 to-violet-600 rounded-2xl hover:shadow-lg hover:shadow-blue-500/25 hover:scale-[1.02] active:scale-[0.98] overflow-hidden"
+      >
+        <div class="absolute inset-0 bg-gradient-to-r from-blue-600 to-violet-600 opacity-0 group-hover:opacity-100 transition-opacity duration-300 blur-sm"></div>
+        <MailIcon class="relative size-5 transition-transform duration-300 group-hover:scale-110" />
+        <span class="relative">Let's work together</span>
+      </a>
+      
+      <a 
+        href="/cv.pdf" 
+        download 
+        class="group inline-flex items-center justify-center gap-3 px-8 py-4 text-base font-semibold text-gray-700 dark:text-gray-300 transition-all duration-300 bg-white/60 dark:bg-gray-800/60 backdrop-blur-sm border border-gray-200/50 dark:border-gray-700/50 rounded-2xl hover:bg-white/80 dark:hover:bg-gray-800/80 hover:shadow-lg hover:scale-[1.02] active:scale-[0.98]"
+      >
+        <svg xmlns="http://www.w3.org/2000/svg" class="size-5 transition-transform duration-300 group-hover:scale-110" viewBox="0 0 24 24" fill="currentColor">
+          <path d="M12 3a1 1 0 011 1v8.586l2.293-2.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L11 12.586V4a1 1 0 011-1z"/>
+          <path d="M5 20a1 1 0 011-1h12a1 1 0 110 2H6a1 1 0 01-1-1z"/>
+        </svg>
+        View Resume
+      </a>
+      
+      <SocialPill href="https://www.linkedin.com/in/tom%C3%A1s-ruiz-191752227">
+        <LinkedInIcon class="size-4" />
+        LinkedIn
+      </SocialPill>
+    </div>
+
+    <!-- Scroll indicator -->
+    <div class="flex justify-center">
+      <div class="animate-bounce">
+        <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6 text-gray-400 dark:text-gray-500" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 14l-7 7m0 0l-7-7m7 7V3" />
+        </svg>
+      </div>
+    </div>
+  </div>
+</section>
+
+<style>
+  @keyframes gradient-x {
+    0%, 100% {
+      background-size: 200% 200%;
+      background-position: left center;
+    }
+    50% {
+      background-size: 200% 200%;
+      background-position: right center;
+    }
+  }
+  
+  .animate-gradient-x {
+    animation: gradient-x 4s ease infinite;
+  }
+</style>

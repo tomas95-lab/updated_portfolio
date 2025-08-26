@@ -1,0 +1,57 @@
+---
+const STACK = [
+  { name: "React", tag: "Frontend", color: "text-sky-500", bg: "bg-sky-500/10", hover: "hover:bg-sky-500/20" },
+  { name: "TypeScript", tag: "Typed", color: "text-blue-600", bg: "bg-blue-600/10", hover: "hover:bg-blue-600/20" },
+  { name: "JavaScript", tag: "Language", color: "text-yellow-600", bg: "bg-yellow-600/10", hover: "hover:bg-yellow-600/20" },
+  { name: "Astro", tag: "Static+Islands", color: "text-orange-500", bg: "bg-orange-500/10", hover: "hover:bg-orange-500/20" },
+  { name: "TailwindCSS", tag: "Styling", color: "text-cyan-500", bg: "bg-cyan-500/10", hover: "hover:bg-cyan-500/20" },
+  { name: "Node.js", tag: "Backend", color: "text-green-600", bg: "bg-green-600/10", hover: "hover:bg-green-600/20" },
+  { name: "PHP", tag: "Backend", color: "text-purple-600", bg: "bg-purple-600/10", hover: "hover:bg-purple-600/20" },
+  { name: "Symfony", tag: "Framework", color: "text-emerald-600", bg: "bg-emerald-600/10", hover: "hover:bg-emerald-600/20" },
+  { name: "SQL", tag: "Data", color: "text-slate-600", bg: "bg-slate-600/10", hover: "hover:bg-slate-600/20" },
+  { name: "MySQL", tag: "Database", color: "text-teal-600", bg: "bg-teal-600/10", hover: "hover:bg-teal-600/20" },
+  { name: "Firebase", tag: "Auth/DB", color: "text-amber-600", bg: "bg-amber-600/10", hover: "hover:bg-amber-600/20" },
+  { name: "Python", tag: "AI/ETL", color: "text-yellow-500", bg: "bg-yellow-500/10", hover: "hover:bg-yellow-500/20" },
+  { name: "jQuery", tag: "Frontend", color: "text-blue-500", bg: "bg-blue-500/10", hover: "hover:bg-blue-500/20" },
+  { name: "Bootstrap", tag: "UI", color: "text-violet-600", bg: "bg-violet-600/10", hover: "hover:bg-violet-600/20" },
+  { name: "Twig", tag: "Templating", color: "text-lime-600", bg: "bg-lime-600/10", hover: "hover:bg-lime-600/20" },
+  { name: "HTML", tag: "Markup", color: "text-red-500", bg: "bg-red-500/10", hover: "hover:bg-red-500/20" },
+  { name: "CSS", tag: "Styles", color: "text-fuchsia-600", bg: "bg-fuchsia-600/10", hover: "hover:bg-fuchsia-600/20" },
+  { name: "Three.js", tag: "3D", color: "text-indigo-500", bg: "bg-indigo-500/10", hover: "hover:bg-indigo-500/20" },
+  { name: "Git", tag: "VCS", color: "text-gray-700", bg: "bg-gray-700/10", hover: "hover:bg-gray-700/20" },
+]
+---
+
+<section class="w-full">
+  <div class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-3 md:gap-4">
+    {STACK.map((item, index) => (
+      <div 
+        class={`group relative flex items-center gap-3 p-4 rounded-xl transition-all duration-300 cursor-default ${item.bg} ${item.hover} hover:shadow-lg hover:scale-[1.02] active:scale-[0.98] backdrop-blur-sm border border-white/10 dark:border-gray-700/20`}
+        style={`animation-delay: ${index * 50}ms`}
+        data-aos="fade-up"
+      >
+        <div class="absolute inset-0 rounded-xl bg-gradient-to-r from-white/0 to-white/5 dark:from-gray-800/0 dark:to-gray-800/5 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+        <div class={`relative size-3 rounded-full ${item.color} bg-current shadow-sm transition-transform duration-300 group-hover:scale-110`}></div>
+        <div class="relative flex flex-col leading-tight">
+          <span class="text-sm font-semibold text-gray-900 dark:text-white transition-colors duration-300">{item.name}</span>
+          <span class="text-xs text-gray-600 dark:text-gray-400 transition-colors duration-300">{item.tag}</span>
+        </div>
+      </div>
+    ))}
+  </div>
+</section>
+
+<style>
+  [data-aos="fade-up"] {
+    opacity: 0;
+    transform: translateY(20px);
+    animation: fadeInUp 0.6s ease-out forwards;
+  }
+  
+  @keyframes fadeInUp {
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+</style>
