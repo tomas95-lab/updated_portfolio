@@ -85,8 +85,8 @@ export const CV: CvData = {
       description:
         "SaaS platform for schools to centralize attendance, communication, payments, and reports with AI automation. Includes marketing landing, mailing system, and pilot program for institutions.",
       image: "/projects/edunova.png",
-      link: "https://www.edunovaapp.com/",                // Landing (View Live)
-      demo: "https://app.edunovaapp.com/login",            // 👈 Demo (View Demo)
+      link: "https://info.edunovaschool.org/",                // Landing (View Live)
+      demo: "https://app.edunovaschool.org/login",            // 👈 Demo (View Demo)
       github: "https://github.com/tomas95-lab/Edunova-landing",
       tags: ["NEXT", "TAILWIND", "FIREBASE", "AI", "TYPE", "REACT"],
     },
