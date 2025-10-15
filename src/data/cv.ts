@@ -39,29 +39,21 @@ export type CvData = {
 export const CV: CvData = {
   profile: {
     name: "Tomás Ruiz",
-    role: "Team Lead · AI Model Trainer · Full Stack Developer",
+    role: "QA ANALYST · Full Stack Developer",
     location: "Buenos Aires, Argentina",
     email: "tomasruiz.dev@gmail.com",
     linkedin: "https://www.linkedin.com/in/tom%C3%A1s-ruiz-191752227",
     summary:
-      "Team Lead and AI Model Trainer at Scale AI with a full-stack background. I lead evaluation workflows to ensure accuracy, relevance and consistency, and previously delivered systems for ANCAP using Symfony and JS. Comfortable across React, Python and SQL.",
+      "QA ANALYST at Outlier AI with a full-stack background. I lead evaluation workflows to ensure accuracy, relevance and consistency, and previously delivered systems for ANCAP using Symfony and JS. Comfortable across React, Python and SQL.",
   },
   experiences: [
     {
-      date: "Feb 2025 – Present",
-      title: "Team Lead",
-      company: "Scale AI",
+      date: "Mar 2024 – Present",
+      title: "QA ANALYST - Latam Coder",
+      company: "Outlier AI",
       description:
-        "Lead and manage evaluators, enforce quality standards, and optimize workflows to improve accuracy, consistency and throughput.",
-      link: "https://scale.com",
-    },
-    {
-      date: "Mar 2024 – Feb 2025",
-      title: "AI Model Trainer & Quality Analyst",
-      company: "Scale AI",
-      description:
-        "Annotated and evaluated model outputs, improved prompts, and used SQL and Python to validate data and streamline reviews.",
-      link: "https://scale.com",
+        "Ensure rigorous quality across training tasks and code to build robust AI using JavaScript, TypeScript, Python, and SQL; apply strict evaluations to verify accuracy and relevance; integrate human feedback to deepen contextual understanding; implement advanced language modeling strategies while collaborating with industry leaders to optimize performance.",
+      link: "https://outlier.ai",
     },
     {
       date: "Apr 2023 – Mar 2024",
